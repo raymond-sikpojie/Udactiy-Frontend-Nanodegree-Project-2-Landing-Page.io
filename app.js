@@ -76,7 +76,6 @@ function smoothScroll(event) {
   function step(timestamp) {
     if (!start) start = timestamp;
     const progress = timestamp - start;
-    // window.scrollTo(0, distance*(progress/duration) + startPosition); An Easing function was used to replace this
     window.scrollTo(
       0,
       easeOutQuad(progress, startPosition, distance, duration)
